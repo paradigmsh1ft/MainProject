@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float sprintSpeed = 6f;
     public float playerStamina = 3f;
-    float standartSpeed;
+    private float standartSpeed;
 
     private Rigidbody2D rb;
     private Animator animator;  
@@ -26,11 +26,16 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(moveX, moveY).normalized * moveSpeed;
         rb.velocity = movement;    
 
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            animator.SetBool("isAttacking", true);          
+        }
+
         MovementAnimation(moveX, moveY, movement);
         PlayerSprint();
         
     }
-    
+          
     private void PlayerSprint()
     {
         if(Input.GetKey(KeyCode.LeftShift) && playerStamina > 0)
