@@ -10,32 +10,36 @@ public class PlayerController : MonoBehaviour
     private float standartSpeed;
 
     private Rigidbody2D rb;
-    private Animator animator;  
+    private Animator animator;
+    private CapsuleCollider capsuleCollider;
+    private AttackController attackController;
 
     private void Start()
     {
         standartSpeed = moveSpeed;
         rb = GetComponent<Rigidbody2D>();   
         animator = GetComponent<Animator>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        attackController = GetComponent<AttackController>();
     } 
-    private void FixedUpdate()
+    private void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
         Vector2 movement = new Vector2(moveX, moveY).normalized * moveSpeed;
-        rb.velocity = movement;    
-
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            animator.SetBool("isAttacking", true);          
+        rb.velocity = movement;   
+        
+        if(Input.GetKeyDown(KeyCode.K))
+        {           
+            attackController.StartAttack();
         }
 
         MovementAnimation(moveX, moveY, movement);
         PlayerSprint();
         
     }
-          
+      
     private void PlayerSprint()
     {
         if(Input.GetKey(KeyCode.LeftShift) && playerStamina > 0)
