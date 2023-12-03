@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movement;   
         
         if(Input.GetKeyDown(KeyCode.K))
-        {           
+        {
+            rb.velocity = Vector2.zero;
             attackController.StartAttack();
         }
 
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         PlayerSprint();
         
     }
-      
+    
     private void PlayerSprint()
     {
         if(Input.GetKey(KeyCode.LeftShift) && playerStamina > 0)

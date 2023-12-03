@@ -22,8 +22,18 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void RegenHealth(int amount)
+    {
+        currentHealth += amount;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
     void Die()
     {
-
+        Destroy(gameObject);
     }
 }

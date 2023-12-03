@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: Sample_0
       rect:
         serializedVersion: 2
-        x: 321
-        y: 1553
-        width: 13
-        height: 48
+        x: 245
+        y: 930
+        width: 635
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Sample_1
       rect:
         serializedVersion: 2
-        x: 207
-        y: 124
-        width: 711
-        height: 771
+        x: 1125
+        y: 895
+        width: 550
+        height: 920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,6 +160,48 @@ TextureImporter:
       bones: []
       spriteID: 8095e7a04a340224db6d7927e8be9b02
       internalID: 1859430243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sample_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 150
+        width: 435
+        height: 730
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcf956ca7777b04b8d9a1466cb40bbe
+      internalID: -289313102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sample_3
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 180
+        width: 560
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c03da11a30723438e685cdba3a2cac
+      internalID: -1567709267
       vertices: []
       indices: 
       edges: []
@@ -177,6 +219,8 @@ TextureImporter:
     nameFileIdTable:
       Sample_0: 1140372265
       Sample_1: 1859430243
+      Sample_2: -289313102
+      Sample_3: -1567709267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
