@@ -35,6 +35,15 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             attackController.StartAttack();
         }
+       
+        if(!attackController.isDamaging)
+        {
+            rb.velocity = movement;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
 
         MovementAnimation(moveX, moveY, movement);
         PlayerSprint();

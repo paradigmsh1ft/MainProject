@@ -7,14 +7,15 @@ public class AttackController : MonoBehaviour
     public PlayerController playerController;
     private EnemyController enemyController;
     private Animator animator;
-    private bool isDamaging = false;
+    private Rigidbody2D enemyRb;
+    public bool isDamaging = false;
     public int attackDamage = 25;
 
     private void Start()
     {
         enemyController = FindAnyObjectByType<EnemyController>();
         animator = GetComponent<Animator>();
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerController>();      
     }
 
     public void StartAttack()
@@ -36,7 +37,7 @@ public class AttackController : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            enemyController.TakeDamage(attackDamage);          
+            enemyController.TakeDamage(attackDamage);                          
         }
       
     }

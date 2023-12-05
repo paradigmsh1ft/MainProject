@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public Transform target;
     private Animator animator;
     private Rigidbody2D rb;
+    private CircleCollider2D cCollider;
     public float speed = 2.0f;
     public float range = 5.0f;
     public int maxHealth = 50;
@@ -17,6 +18,7 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        cCollider = rb.GetComponent<CircleCollider2D>();
     }
 
     void Update()
@@ -48,13 +50,21 @@ public class EnemyController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
-
-    void Die()
+    IEnumerator Die()
     {
+        animator.SetBool("isMoving", false);
         animator.SetBool("isDefeated", true);
-        Destroy(gameObject);
+      
+        rb.velocity = Vector2.zero;
+
+        cCollider.enabled = false;
+
+        yield return new WaitForSeconds(0.6f); 
+
+        Destroy(gameObject); 
     }
+    
 }
