@@ -6,8 +6,8 @@ using UnityEngine;
 public class DamageDealingToPlayer : MonoBehaviour
 {
     private PlayerHealth playerHealth;
-    public int damageToDeal;
 
+    public int damageToDeal;
     private float lastDamageTime;
     private float damageInterval = 1f;
 

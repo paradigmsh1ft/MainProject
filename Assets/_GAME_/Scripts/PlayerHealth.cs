@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }    
-
     }
 
     public void RegenHealth(int amount)

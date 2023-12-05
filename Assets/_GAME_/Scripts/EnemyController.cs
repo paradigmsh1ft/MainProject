@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private CircleCollider2D cCollider;
+
     public float speed = 2.0f;
     public float range = 5.0f;
     public int maxHealth = 50;
@@ -38,11 +39,9 @@ public class EnemyController : MonoBehaviour
     
     void FollowPlayer()
     {     
-
         animator.SetBool("isMoving", true);
         Vector2 direction = (target.position - transform.position).normalized;
         rb.velocity = direction * speed;
-
     }
    public void TakeDamage(int damageAmount)
     {
@@ -66,5 +65,4 @@ public class EnemyController : MonoBehaviour
 
         Destroy(gameObject); 
     }
-    
 }

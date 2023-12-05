@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    private PlayerInventory playerInventory;
     private PlayerHealth playerHealth;
     private ICollectableHealthRegen healthRegen;
-    private PlayerInventory playerInventory;
 
     private void Start()
     {  
@@ -20,10 +20,17 @@ public class Collectable : MonoBehaviour
 
         if(collision.CompareTag("Player"))
         {
-            healthRegen.RegenerateHealth(playerHealth);
-            playerInventory.AddItem(this.gameObject);
+
+            if (gameObject.CompareTag("NotInventoryItem"))
+            {
+                healthRegen.RegenerateHealth(playerHealth);
+            }
+            else if (gameObject.CompareTag("InventoryItem"))
+            {
+                playerInventory.AddItem(this.gameObject);
+            }
+           
             Destroy(this.gameObject);
         }
     }
-
 }

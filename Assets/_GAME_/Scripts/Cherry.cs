@@ -10,5 +10,5 @@ public class Cherry : MonoBehaviour, ICollectableHealthRegen
     {
         playerHealth.RegenHealth(healthAmount);
     }
-
+    //Do a new special bonus that cherry gives like a stamina boost
 }

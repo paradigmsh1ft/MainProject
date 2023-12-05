@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float sprintSpeed = 6f;
-    public float playerStamina = 3f;
-    private float standartSpeed;
-
     private Rigidbody2D rb;
     private Animator animator;
     private CapsuleCollider capsuleCollider;
     private AttackController attackController;
+
+    public float moveSpeed = 5f;
+    public float sprintSpeed = 6f;
+    public float playerStamina = 3f;
+    private float standartSpeed;
 
     private void Start()
     {
@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
         }
 
         MovementAnimation(moveX, moveY, movement);
-        PlayerSprint();
-        
+
+        PlayerSprint();   
     }
     
     private void PlayerSprint()
@@ -81,6 +81,5 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("moveX", moveX);
         animator.SetFloat("moveY", moveY);
         animator.SetBool("isMoving", isMoving);
-
     }
 }

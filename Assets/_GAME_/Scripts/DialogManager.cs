@@ -8,14 +8,12 @@ public class DialogManager : MonoBehaviour
 {
     public GameObject dialogBar;
     public static DialogManager Instance;
-    public TextMeshProUGUI dialogArea;
-    public TextMeshProUGUI characterName;
-
-    private Queue<DialogLine> lines;
+    public TextMeshProUGUI dialogArea; 
 
     public bool isDialogActive = false;
-
     public float dialogSpeed = 0.3f;
+
+    private Queue<DialogLine> lines;
 
     private void Awake()
     {
@@ -26,8 +24,7 @@ public class DialogManager : MonoBehaviour
 
         lines = new Queue<DialogLine>();
 
-        dialogBar.SetActive(false);
-      
+        dialogBar.SetActive(false);     
     }
 
     private void Update()
@@ -76,8 +73,7 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         isDialogActive = false;              
-        dialogBar.SetActive(false); 
-        
+        dialogBar.SetActive(false);         
     }
 
     IEnumerator TypeSentence(DialogLine dialogLine)
@@ -90,7 +86,4 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(dialogSpeed);
         }
     }
-    
-    
-
 }

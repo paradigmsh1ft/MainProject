@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -148,9 +148,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09326905, y: -0.9426546}
+  m_Offset: {x: -0.0749203, y: -0.9426546}
   serializedVersion: 2
-  m_Radius: 0.65278035
+  m_Radius: 0.5977346
 --- !u!95 &7860210853479844451
 Animator:
   serializedVersion: 5
@@ -187,8 +187,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 3
   range: 6
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
 --- !u!114 &2366077785268793835
 MonoBehaviour:
   m_ObjectHideFlags: 0

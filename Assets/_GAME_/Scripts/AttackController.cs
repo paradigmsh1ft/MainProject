@@ -8,6 +8,7 @@ public class AttackController : MonoBehaviour
     private EnemyController enemyController;
     private Animator animator;
     private Rigidbody2D enemyRb;
+
     public bool isDamaging = false;
     public int attackDamage = 25;
 
@@ -41,5 +42,4 @@ public class AttackController : MonoBehaviour
         }
       
     }
-   
 }

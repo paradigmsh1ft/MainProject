@@ -42,5 +42,4 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Inventory is full!");
         }
     }  
-
 }

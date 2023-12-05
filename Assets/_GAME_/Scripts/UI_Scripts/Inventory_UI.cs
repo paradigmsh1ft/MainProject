@@ -27,5 +27,4 @@ public class Inventory_UI : MonoBehaviour
         inventoryPanel.SetActive(isOpen);
        
     }
-   
 }

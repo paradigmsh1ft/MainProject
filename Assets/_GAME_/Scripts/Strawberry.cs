@@ -9,4 +9,5 @@ public class Strawberry : MonoBehaviour, ICollectableHealthRegen
     {
         playerHealth.RegenHealth(healthAmount);
     }
+    //Do a new special bonus that strawberry gives like a damage boost
 }
